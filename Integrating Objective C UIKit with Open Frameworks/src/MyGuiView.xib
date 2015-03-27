@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyGuiView">
+            <connections>
+                <outlet property="fillSwitch" destination="v5A-nY-Ng7" id="Xu5-zy-PaH"/>
+                <outlet property="radiusSlider" destination="Wl7-Ko-0bA" id="KVK-j9-gDc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="viM-rH-5EP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.5" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Circle Radius" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExD-74-95X">
+                    <rect key="frame" x="8" y="12" width="102" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Render Fill" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvb-Bn-q6p">
+                    <rect key="frame" x="18" y="51" width="82" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="10" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-Ko-0bA">
+                    <rect key="frame" x="126" y="8" width="275" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="271" id="yy0-vD-Fsd"/>
+                    </constraints>
+                    <connections>
+                        <action selector="radiusSliderHandler:" destination="-1" eventType="valueChanged" id="P3U-B1-Yqj"/>
+                    </connections>
+                </slider>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v5A-nY-Ng7">
+                    <rect key="frame" x="128" y="46" width="51" height="31"/>
+                    <connections>
+                        <action selector="fillSwitchHandler:" destination="-1" eventType="valueChanged" id="kxh-Jg-XV7"/>
+                    </connections>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="xvb-Bn-q6p" firstAttribute="centerY" secondItem="v5A-nY-Ng7" secondAttribute="centerY" id="2Ne-Fl-5hg"/>
+                <constraint firstItem="ExD-74-95X" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="7dG-iO-xzR"/>
+                <constraint firstItem="xvb-Bn-q6p" firstAttribute="top" secondItem="ExD-74-95X" secondAttribute="bottom" constant="18" id="8hJ-rV-f6b"/>
+                <constraint firstItem="Wl7-Ko-0bA" firstAttribute="leading" secondItem="v5A-nY-Ng7" secondAttribute="leading" id="9hn-1A-wc3"/>
+                <constraint firstItem="Wl7-Ko-0bA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="NbR-EF-hkg"/>
+                <constraint firstItem="Wl7-Ko-0bA" firstAttribute="leading" secondItem="ExD-74-95X" secondAttribute="trailing" constant="18" id="ZLz-Ge-AtD"/>
+                <constraint firstItem="xvb-Bn-q6p" firstAttribute="centerX" secondItem="ExD-74-95X" secondAttribute="centerX" id="blM-iZ-6GU"/>
+                <constraint firstItem="v5A-nY-Ng7" firstAttribute="top" secondItem="Wl7-Ko-0bA" secondAttribute="bottom" constant="8" symbolic="YES" id="d6A-cb-4Kf"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
